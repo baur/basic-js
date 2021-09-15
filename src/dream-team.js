@@ -21,7 +21,7 @@ export default function createDreamTeam(members) {
   let result = []
   members.forEach(member => {
     if ((typeof member) === 'string') {
-      result.push(member.replaceAll(' ', '')[0].toUpperCase())
+      result.push(member.trim()[0].toUpperCase())
     }
   });
   return result.sort().join('')
